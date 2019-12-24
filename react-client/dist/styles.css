@@ -1,3 +1,9 @@
+body {
+    background-color: rgb(48, 70, 112);
+    padding: 200px;
+    margin: 0;
+}
+
 header {
     display: block;
     background-color: black;
@@ -6,15 +12,32 @@ header {
     color: white;
 }
 
-#headerButtons {
+ul.header li {
+    display: inline;
     list-style-type: none;
     margin: 0;
+}
+ul.header {
+    background-color: #111;
     padding: 0;
 }
-
-.navButton {
-    float: right;
+ul.header li a {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
 }
+
+.active {
+    background-color: #0099FF;
+    height: 10px;
+}
+
+.content {
+    background-color: #FFF;
+    padding: 20px;
+  }
 
 footer {
     display: block;
@@ -23,3 +46,4 @@ footer {
     background-color: black;
     color: white;   
 }
+

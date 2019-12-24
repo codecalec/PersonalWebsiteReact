@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { HashRouter, Route, Link} from 'react-router-dom';
 import { browserHistory } from 'react-router';
 import HomePage from './HomePage';
+import StuffPage from './StuffPage';
+import ContactPage from './ContactPage';
 import NavBar from './HeaderComponent/NavBar';
 import Footer from './FooterComponent/Footer';
 
 class App extends Component {
     render() {
         return (
-            <Router>
+            <HashRouter>
                 <div>
                     <NavBar />
-                    <Router name="home" exact path="/" component={HomePage} />
+                    <div className="content">
+                        <Route exact path="/" component={HomePage}/>
+                        <Route path="/stuff" component={StuffPage}/>
+                        <Route path="/contact" component={ContactPage}/>    
+                    </div>
                     <Footer/>
                 </div>
-            </Router>
+            </HashRouter>
         )
     }
 }
