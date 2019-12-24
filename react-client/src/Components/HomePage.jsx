@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 
 class HomePage extends Component {
     render() {
@@ -10,3 +9,5 @@ class HomePage extends Component {
         )
     }
 }
+
+export default HomePage;
