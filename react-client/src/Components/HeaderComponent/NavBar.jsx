@@ -4,13 +4,19 @@ import { NavLink } from "react-router-dom";
 class NavBar extends Component{
     render(){
         return (
-            <header>
-                <ul className="header">
-                    <li><NavLink exact to="/">Home</NavLink></li>
-                    <li><NavLink to="/stuff">Stuff</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
-                </ul>
-            </header>
+            <div className="header container">
+                <div class="row">
+                    <div className="one-third column">
+                        <NavLink exact to="/" className="nav">Home</NavLink>
+                    </div>
+                    <div class="one-third column">
+                        <NavLink to="/stuff" className="nav">Stuff</NavLink>
+                    </div>
+                    <div class="one-third column">
+                        <NavLink to="/contact" className="nav">Contact</NavLink>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

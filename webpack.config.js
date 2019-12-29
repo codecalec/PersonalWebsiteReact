@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.css']
+    extensions: ['.js', '.jsx', '.json', '.css','.pdf']
   },
   module : {
     rules : [
@@ -24,6 +24,10 @@ module.exports = {
       },
       {
         test: /\.jpg/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.pdf/,
         loader: 'file-loader'
       },
       {
