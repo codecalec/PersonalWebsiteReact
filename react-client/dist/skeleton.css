@@ -32,6 +32,10 @@
 
 .section.footer {
   background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .container {
@@ -193,6 +197,17 @@
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.nav.footer {
+  color: blue;
+  font-size: 28px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.nav.footer:hover {
+  color: #0fa0ce;
 }
 
 .active {
