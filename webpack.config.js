@@ -7,7 +7,8 @@ module.exports = {
   entry: `${SRC_DIR}/index.js`,
   output: {
     path: DIST_DIR,
-    filename: "bundle.js"
+    filename: "bundle.js",
+    sourceMapFilename: "bundle.map"
   },
   resolve: {
     extensions: [".js", ".jsx", ".json", ".css", ".pdf"]
@@ -35,7 +36,8 @@ module.exports = {
         include: SRC_DIR,
         loader: "babel-loader",
         query: {
-          presets: ["react", "es2015"]
+          presets: ["react", ["es2015", { modules: false }]],
+          plugins: ["syntax-dynamic-import"]
         }
       }
     ]
@@ -44,5 +46,8 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
     })
-  ]
+  ],
+  node: {
+    fs: "empty"
+ }
 };

@@ -19,7 +19,7 @@ class NavBar extends Component {
             </div>
             <div class="one-third column">
               <NavLink to="/contact" className="nav">
-                Contact
+                Resume
               </NavLink>
             </div>
           </div>

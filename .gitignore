@@ -3,8 +3,7 @@ logs
 *.Logs
 
 # Compiled directory and file
-build/
-bundle.js
+react-client/dist/*bundle.js
 
 # Dependency directories
 node_modules/

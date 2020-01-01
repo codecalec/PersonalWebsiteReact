@@ -1,26 +1,29 @@
-import React, { Component } from "react";
-import { HashRouter, Route, Link } from "react-router-dom";
-import { browserHistory } from "react-router";
-import HomePage from "./HomePage";
-import StuffPage from "./StuffPage";
-import ContactPage from "./ContactPage";
+import React, { Component, lazy, Suspense } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+const HomePage = lazy(() => import("./HomePage"));
+const StuffPage = lazy(() => import("./StuffPage"));
+const ResumePage = lazy(() => import("./ResumePage"))
+
 import NavBar from "./HeaderComponent/NavBar";
 import Footer from "./FooterComponent/Footer";
 
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <Router>
         <div>
           <NavBar />
           <div className="content">
-            <Route exact path="/" component={HomePage} />
-            <Route path="/stuff" component={StuffPage} />
-            <Route path="/contact" component={ContactPage} />
+            <Suspense fallback={<div>Loading Page...</div>}>
+              <Route exact path="/" component={HomePage} />
+              <Route path="/stuff" component={StuffPage} />
+              <Route path="/resume" component={ResumePage} />
+            </Suspense>
           </div>
           <Footer />
         </div>
-      </HashRouter>
+      </Router>
     );
   }
 }
