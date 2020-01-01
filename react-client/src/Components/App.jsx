@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const HomePage = lazy(() => import("./HomePage"));
 const StuffPage = lazy(() => import("./StuffPage"));
-const ResumePage = lazy(() => import("./ResumePage"))
+const ResumePage = lazy(() => import("./ResumePage"));
 
 import NavBar from "./HeaderComponent/NavBar";
 import Footer from "./FooterComponent/Footer";
