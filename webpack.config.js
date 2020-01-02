@@ -11,7 +11,7 @@ module.exports = {
     sourceMapFilename: "bundle.map"
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".css", ".pdf"]
+    extensions: [".js", ".jsx", ".json", ".css", ".pdf", ".md"]
   },
   module: {
     rules: [
@@ -32,6 +32,10 @@ module.exports = {
         loader: "file-loader"
       },
       {
+        test: /\.md/,
+        loader: "file-loader"
+      },
+      {
         test: /\.jsx?/,
         include: SRC_DIR,
         loader: "babel-loader",
@@ -45,6 +49,10 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
+    }),
+    new webpack.IgnorePlugin({
+      resourceRegExp:
+        /https:\/\/alexveltmanpersonalwebsite.s3.eu-west-2.amazonaws.com\/.*/
     })
   ],
   node: {

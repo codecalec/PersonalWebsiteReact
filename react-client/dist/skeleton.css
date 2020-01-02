@@ -28,11 +28,17 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section.header {
   background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+
 }
 
 .section.footer {
+  flex-shrink: 0;
   background-color: black;
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
@@ -46,6 +52,11 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+.container.resume {
+  flex: 1 0 auto
+}
+
 .column,
 .columns {
   width: 100%;
