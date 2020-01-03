@@ -52,7 +52,7 @@ module.exports = {
     }),
     new webpack.IgnorePlugin({
       resourceRegExp:
-        /https:\/\/alexveltmanpersonalwebsite.s3.eu-west-2.amazonaws.com\/.*/
+        /.*.md/
     })
   ],
   node: {
