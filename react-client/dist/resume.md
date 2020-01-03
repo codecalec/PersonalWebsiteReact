@@ -1,1 +1,0 @@
-../../PersonalResume/resume.md
