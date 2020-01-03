@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 const SRC_DIR = path.join(__dirname, "/react-client/src");
 const DIST_DIR = path.join(__dirname, "/react-client/dist");
 const webpack = require("webpack");
@@ -11,7 +12,10 @@ module.exports = {
     sourceMapFilename: "bundle.map"
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".css", ".pdf", ".md"]
+    extensions: [".js", ".jsx", ".json", ".css", ".pdf"]
+  },
+  externals: {
+    "mdsource": "'https://alexveltmanpersonalwebsite.s3.eu-west-2.amazonaws.com/markdown/resume.md'"
   },
   module: {
     rules: [
@@ -32,10 +36,6 @@ module.exports = {
         loader: "file-loader"
       },
       {
-        test: /\.md/,
-        loader: "file-loader"
-      },
-      {
         test: /\.jsx?/,
         include: SRC_DIR,
         loader: "babel-loader",
@@ -49,10 +49,6 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
-    }),
-    new webpack.IgnorePlugin({
-      resourceRegExp:
-        /.*.md/
     })
   ],
   node: {

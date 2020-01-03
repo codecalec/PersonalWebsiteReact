@@ -1,7 +1,7 @@
-import React, { Component, Suspense } from "react";
+import React, { Component } from "react";
 
 import ReactMarkdown from "react-markdown";
-import source from "../../../PersonalResume/resume.md"
+import source from "mdsource";
 
 class ResumePage extends Component {
   constructor(props) {
@@ -12,7 +12,6 @@ class ResumePage extends Component {
   }
 
   componentDidMount() {
-    console.log("Hello");
     fetch(source)
       .then(response => {
         return response.text();
