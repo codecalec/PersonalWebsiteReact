@@ -1,7 +1,7 @@
 import React, { Component, Suspense } from "react";
 
 import ReactMarkdown from "react-markdown";
-import source from "../../dist/resume.md"
+import source from "../../../PersonalResume/resume.md"
 
 class ResumePage extends Component {
   constructor(props) {
