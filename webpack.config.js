@@ -15,7 +15,8 @@ module.exports = {
     extensions: [".js", ".jsx", ".json", ".css", ".pdf"]
   },
   externals: {
-    "mdsource": "'https://alexveltmanpersonalwebsite.s3.eu-west-2.amazonaws.com/markdown/resume.md'"
+    mdsource:
+      "'https://alexveltmanpersonalwebsite.s3.eu-west-2.amazonaws.com/markdown/resume.md'"
   },
   module: {
     rules: [

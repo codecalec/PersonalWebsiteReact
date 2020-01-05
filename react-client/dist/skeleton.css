@@ -44,13 +44,15 @@
   right: 0;
 }
 
+.section.content {
+  margin-bottom: 10%;
+}
+
 @media screen and (max-width: 1000px) {
-  .section.content{
+  .section.content {
     padding-top: 10%;
   }
 }
-
-
 
 .container {
   position: relative;
@@ -469,7 +471,7 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle;
+  list-style: black circle;
 }
 ol {
   list-style: decimal inside;

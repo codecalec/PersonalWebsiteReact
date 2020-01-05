@@ -25,14 +25,17 @@ class ResumePage extends Component {
   }
 
   customHeading(props) {
-    return React.createElement(`h${props.level+1}`, props, props.children)
+    return React.createElement(`h${props.level + 1}`, props, props.children);
   }
 
   render() {
     return (
       <div className="section content" style={{ marginTop: "5%" }}>
         <div className="container resume">
-          <ReactMarkdown source={this.state.text} renderers={{heading: this.customHeading}}/>
+          <ReactMarkdown
+            source={this.state.text}
+            renderers={{ heading: this.customHeading }}
+          />
         </div>
       </div>
     );
