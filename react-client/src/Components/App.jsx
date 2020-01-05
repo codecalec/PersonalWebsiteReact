@@ -14,7 +14,7 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
-          <div className="content">
+          <div className="section content">
             <Suspense fallback={<div>Loading Page...</div>}>
               <Route exact path="/" component={HomePage} />
               <Route path="/stuff" component={StuffPage} />

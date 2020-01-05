@@ -26,17 +26,17 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .section.header {
   background-color: black;
   position: fixed;
+  z-index: 1000;
   left: 0;
   top: 0;
   right: 0;
-
 }
 
 .section.footer {
-  flex-shrink: 0;
   background-color: black;
   position: fixed;
   left: 0;
@@ -44,17 +44,22 @@
   right: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .section.content{
+    padding-top: 10%;
+  }
+}
+
+
+
 .container {
   position: relative;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
+  margin-top: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-}
-
-.container.resume {
-  flex: 1 0 auto
 }
 
 .column,
@@ -63,16 +68,9 @@
   float: left;
   box-sizing: border-box;
 }
-/* For devices larger than 400px */
-@media (min-width: 400px) {
-  .container {
-    width: 85%;
-    padding: 0;
-  }
-}
 
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* For devices larger than 300px */
+@media (min-width: 300px) {
   .container {
     width: 80%;
   }
@@ -197,17 +195,33 @@
 
 .nav {
   display: inline-block;
-  margin-left: 30%;
-  margin-right: 30%;
   width: fit-content;
   color: #555;
   text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 38px;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-decoration: none;
+  margin-left: 30%;
+  margin-right: 30%;
+  line-height: 38px;
+}
+
+@media screen and (min-width: 300px) {
+  .nav {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .nav {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .nav {
+    font-size: 18px;
+  }
 }
 
 .nav.footer {
@@ -455,11 +469,20 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside;
+  list-style: circle;
 }
 ol {
   list-style: decimal inside;
 }
+ul ul {
+  list-style: none;
+}
+ul ul li:before {
+  content: "-";
+  text-emphasis: bold;
+  padding-right: 8px;
+}
+
 ol,
 ul {
   padding-left: 0;

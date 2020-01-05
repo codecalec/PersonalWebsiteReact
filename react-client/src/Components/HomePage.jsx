@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class HomePage extends Component {
   render() {
     return (
-      <div className="section content" style={{ marginTop: "10%" }}>
+      <div className="section content" style={{ marginTop: "20%" }}>
         <div className="container">
           <h1>About Me</h1>
           <text>
