@@ -1,5 +1,7 @@
 # PersonalWebsite
 
+This repo is archived and outdated since I've ported my site to Python using Flask which can be found [here](https://github.com/codecalec/PersonalWebsiteFlask/)
+
 ## About
 
 This is the source code for my personal website. It was my first experience with using javascript and react. The website can be found [here](www.alexveltman.com).
